@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Control} from "react-hook-form";
