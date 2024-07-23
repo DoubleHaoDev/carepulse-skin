@@ -6,8 +6,8 @@ import {
 } from "@/lib/appwrite.config";
 import {ID, Query} from "node-appwrite";
 import {parseStringify} from "@/lib/utils";
-import {ca} from "date-fns/locale";
 import {Appointment} from "@/types/appwrite.types";
+import {revalidatePath} from "next/cache";
 
 export const createAppointment = async (appointment: CreateAppointmentParams) => {
     try {
@@ -68,6 +68,28 @@ export const getRecentAppointmentList = async () => {
         }
 
         return parseStringify(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const updateAppointment = async ({appointmentId, userId, appointment, type}: UpdateAppointmentParams) => {
+    try {
+        const updatedAppointment = await databases.updateDocument(
+            DATABASE_ID!,
+            APPOINTMENT_COLLECTION_ID!,
+            appointmentId,
+            appointment
+        )
+
+        if (!updatedAppointment) {
+            throw new Error("Error updating appointment");
+        }
+
+        //TODO SMS notification
+
+        revalidatePath("/admin");
+        return parseStringify(updatedAppointment);
     } catch (error) {
         console.log(error);
     }
