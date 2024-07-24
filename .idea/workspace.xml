@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e1e4b3-1106-4bc4-986e-2d384cb05ec2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/AppointmentForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/AppointmentForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/appointment.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/appointment.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -78,7 +77,7 @@
       <workItem from="1721572377076" duration="44113000" />
       <workItem from="1721739933295" duration="8000" />
       <workItem from="1721739956246" duration="11000" />
-      <workItem from="1721740141817" duration="114000" />
+      <workItem from="1721740141817" duration="2426000" />
     </task>
     <servers />
   </component>
