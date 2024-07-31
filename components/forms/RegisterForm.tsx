@@ -7,47 +7,36 @@ import {Form} from "@/components/ui/form"
 import CustomFormField from "@/components/CustomFormField";
 import SubmitButton from "@/components/SubmitButton";
 import {useState} from "react";
-import {UserFormValidation} from "@/lib/validation";
+import {UserFormValidation, UserRegisterFormValidation} from "@/lib/validation";
 import {useRouter} from "next/navigation";
 import {createUser} from "@/lib/actions/patient.actions";
+import {FormFieldType} from "@/components/forms/PatientForm";
 
 
-export enum FormFieldType {
-    INPUT = "input",
-    TEXTAREA = "textarea",
-    PHONE_INPUT = "phoneInput",
-    CHECKBOX = "checkbox",
-    DATE_PICKER = "datePicker",
-    SELECT = "select",
-    SKELETON = "skeleton",
-    PASSWORD = "password"
-}
-
-
-const PatientForm = ({isRegister}: { isRegister: boolean }) => {
+const PatientForm = ({isRegister}: {isRegister: boolean}) => {
     const router = useRouter();
-    const [isLoading, setIsLoading] = useState(false);
-    const form = useForm<z.infer<typeof UserFormValidation>>({
-        resolver: zodResolver(UserFormValidation),
+    const [isLoading, setIsLoading] =useState(false);
+    const form = useForm<z.infer<typeof UserRegisterFormValidation>>({
+        resolver: zodResolver(UserRegisterFormValidation),
         defaultValues: {
-            name: "",
             email: "",
-            phone: ""
+            password: "",
+            confirmPassword: ""
         },
     })
 
-    async function onSubmit({name, email, phone}: z.infer<typeof UserFormValidation>) {
+    async function onSubmit({email, password, confirmPassword}: z.infer<typeof UserRegisterFormValidation>) {
         setIsLoading(true);
-        try {
-            const userData = {name, email, phone};
-            const user = await createUser(userData);
-            if (user) {
-                router.push(`/patients/${user.$id}/register`);
-
-            }
-        } catch (error) {
-            console.log(error);
-        }
+        // try {
+        //     const userData = {name, email, phone};
+        //     const user = await createUser(userData);
+        //     if(user){
+        //         router.push(`/patients/${user.$id}/register`);
+        //
+        //     }
+        // }catch (error){
+        //     console.log(error);
+        // }
     }
 
     return (
@@ -75,7 +64,16 @@ const PatientForm = ({isRegister}: { isRegister: boolean }) => {
                     iconSrc="/assets/icons/password.svg"
                     iconAlt="user"
                 />
-                <SubmitButton isLoading={isLoading}>Login</SubmitButton>
+                <CustomFormField
+                    fieldType={FormFieldType.PASSWORD}
+                    control={form.control}
+                    name="confirmPassword"
+                    label="Confirm Password"
+                    placeholder="Confirm Password"
+                    iconSrc="/assets/icons/password.svg"
+                    iconAlt="user"
+                />
+                <SubmitButton isLoading={isLoading} >Register</SubmitButton>
             </form>
         </Form>
     )
