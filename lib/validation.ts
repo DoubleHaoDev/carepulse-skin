@@ -9,6 +9,25 @@ export const UserFormValidation = z.object({
 
 })
 
+// Minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character
+const passwordValidation = new RegExp(
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+);
+
+export const UserRegisterFormValidation = z.object({
+    email: z.string().email("Invalid email address."),
+    password: z.string()
+        .min(2, {message: "Name must be at least 2 characters.",})
+        .max(50, {message: "Name must be at most 50 characters."})
+        .regex(passwordValidation, {message: 'Your password is not valid',}),
+    confirmPassword: z.string().regex(passwordValidation, {message: 'Your password is not valid',})
+
+}).refine((data) => data.password === data.confirmPassword,
+    {
+        message: "Password don't match",
+        path: ["confirmPassword"],
+    })
+
 export const PatientFormValidation = z.object({
     name: z
         .string()

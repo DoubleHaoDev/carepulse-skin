@@ -7,9 +7,7 @@ import {Input} from "@/components/ui/input";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import {E164Number} from "libphonenumber-js";
-
 import DatePicker from "react-datepicker";
-
 import "react-datepicker/dist/react-datepicker.css";
 import {Select, SelectContent, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Textarea} from "@/components/ui/textarea";
@@ -141,6 +139,29 @@ const RenderInput = ({field, props}: { field: any; props: CustomProps }) => {
                     </div>
                 </FormControl>
             )
+        case FormFieldType.PASSWORD:
+            return (
+                <div className="flex rounded-md border border-dark-500 bg-dark-400">
+                    {iconSrc && (
+                        <Image
+
+                            src={iconSrc}
+                            height={24}
+                            width={24}
+                            alt={iconAlt || "icon"}
+                            className="ml-2 dark:invert"
+                        />
+                    )}
+                    <FormControl>
+                        <Input
+                            type="password"
+                            placeholder={placeholder}
+                            {...field}
+                            className="shad-input border-0"
+                        />
+                    </FormControl>
+                </div>
+            );
         default:
             break;
     }
