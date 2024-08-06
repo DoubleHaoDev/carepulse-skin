@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e1e4b3-1106-4bc4-986e-2d384cb05ec2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/carepulse-skin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/carefusion-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CustomFormField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomFormField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/PatientForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/PatientForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +39,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "CAR-12-add-signup-button",
-    "last_opened_file_path": "/Users/andychang/Desktop/Programming/Carepulse/carepulse-skin/components/forms",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/andychang/Desktop/Programming/Carepulse/carefusion-frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Debug",
+    "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/andychang/Desktop/Programming/Carepulse/carepulse-skin/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -60,6 +63,34 @@
       <recent name="$PROJECT_DIR$/components/table" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -83,6 +114,7 @@
       <workItem from="1721739933295" duration="8000" />
       <workItem from="1721739956246" duration="11000" />
       <workItem from="1721740141817" duration="6337000" />
+      <workItem from="1722896297588" duration="2586000" />
     </task>
     <servers />
   </component>
@@ -99,5 +131,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/forms/RegisterForm.tsx</url>
+          <line>16</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

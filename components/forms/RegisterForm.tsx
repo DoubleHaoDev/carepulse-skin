@@ -27,16 +27,22 @@ const PatientForm = ({isRegister}: {isRegister: boolean}) => {
 
     async function onSubmit({email, password, confirmPassword}: z.infer<typeof UserRegisterFormValidation>) {
         setIsLoading(true);
-        // try {
-        //     const userData = {name, email, phone};
-        //     const user = await createUser(userData);
-        //     if(user){
-        //         router.push(`/patients/${user.$id}/register`);
-        //
-        //     }
-        // }catch (error){
-        //     console.log(error);
-        // }
+       async function userSignUpAction() {
+           const userData = {username:email,password: password};
+           console.log(userData);
+            const res = await fetch('http://localhost:8080/v1/authentication/signup', {
+                method: "post",
+                headers: { 'Content-Type': 'application/json' },
+                mode: 'cors',
+                body: JSON.stringify(userData)
+            })
+            return res;
+        }
+        const signUpResponse: Response = await userSignUpAction();
+        if(!signUpResponse.ok){
+            //Signup failed
+        }
+        setIsLoading(false);
     }
 
     return (
