@@ -13,7 +13,7 @@ import {createUser} from "@/lib/actions/patient.actions";
 import {FormFieldType} from "@/components/forms/PatientForm";
 
 
-const PatientForm = ({isRegister}: {isRegister: boolean}) => {
+const UserRegisterForm = ({isRegister}: {isRegister: boolean}) => {
     const router = useRouter();
     const [isLoading, setIsLoading] =useState(false);
     const form = useForm<z.infer<typeof UserRegisterFormValidation>>({
@@ -85,4 +85,4 @@ const PatientForm = ({isRegister}: {isRegister: boolean}) => {
     )
 }
 
-export default PatientForm;
+export default UserRegisterForm;

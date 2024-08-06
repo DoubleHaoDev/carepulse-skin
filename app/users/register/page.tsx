@@ -1,8 +1,7 @@
 import Image from "next/image";
-import PatientForm from "@/components/forms/PatientForm";
 import Link from "next/link";
 import PasskeyModal from "@/components/ui/PasskeyModal";
-import RegisterForm from "@/components/forms/RegisterForm";
+import UserRegisterForm from "@/components/forms/UserRegisterForm";
 
 
 export default function UserRegister({searchParams}: SearchParamProps) {
@@ -19,9 +18,9 @@ export default function UserRegister({searchParams}: SearchParamProps) {
                         alt="Patient"
                         className="mb-12 h-10 w-fit"
                     />
-                    <RegisterForm isRegister = {true} />
+                    <UserRegisterForm isRegister = {true} />
                     <div className="text-14-regular mt-20 flex justify-between">
-                        <p className="justify-items-end text-dark-600 xl:text-left">© 2024 CarePulse</p>
+                        <p className="justify-items-end text-dark-600 xl:text-left">© 2024 CareFusion</p>
                         <Link href="/public?admin=true" className="text-green-500">Admin</Link>
                     </div>
                 </div>

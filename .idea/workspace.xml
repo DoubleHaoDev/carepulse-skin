@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e1e4b3-1106-4bc4-986e-2d384cb05ec2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/carepulse-skin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/carefusion-frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/patients/[userId]/new-appointment/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/patients/[userId]/new-appointment/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/patients/[userId]/new-appointment/success/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/patients/[userId]/new-appointment/success/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/patients/[userId]/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/patients/[userId]/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/UserRegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/actions/appointment.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/appointment.actions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "CAR-22-change-name-to-carefusion",
     "last_opened_file_path": "/Users/andychang/Desktop/Programming/Carepulse/carefusion-frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,7 +53,7 @@
     "npm.dev.executor": "Debug",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/andychang/Desktop/Programming/Carepulse/carepulse-skin/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/andychang/Desktop/Programming/Carepulse/carefusion-frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,7 +118,7 @@
       <workItem from="1721739933295" duration="8000" />
       <workItem from="1721739956246" duration="11000" />
       <workItem from="1721740141817" duration="6337000" />
-      <workItem from="1722896297588" duration="2586000" />
+      <workItem from="1722896297588" duration="5729000" />
     </task>
     <servers />
   </component>
@@ -131,16 +135,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/forms/RegisterForm.tsx</url>
-          <line>16</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

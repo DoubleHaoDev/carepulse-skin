@@ -86,7 +86,7 @@ export const updateAppointment = async ({appointmentId, userId, appointment, typ
             throw new Error("Error updating appointment");
         }
 
-        const smsMEssage = `Hi, it's CarePulse. 
+        const smsMEssage = `Hi, it's CareFusion. 
         ${type === "schedule" ? `Your appointment has beend scheduled for ${formatDateTime(appointment.schedule!).dateTime} with Dr. ${appointment.primaryPhysician}` :
             `We regret to inform you that your appointment has been cancelled. Reason: ${appointment.cancellationReason}`}`;
         await sendSMSNotification(userId, smsMEssage);
