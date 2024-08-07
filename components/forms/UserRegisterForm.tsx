@@ -7,13 +7,12 @@ import {Form} from "@/components/ui/form"
 import CustomFormField from "@/components/CustomFormField";
 import SubmitButton from "@/components/SubmitButton";
 import {useState} from "react";
-import {UserFormValidation, UserRegisterFormValidation} from "@/lib/validation";
+import {UserRegisterFormValidation} from "@/lib/validation";
 import {useRouter} from "next/navigation";
-import {createUser} from "@/lib/actions/patient.actions";
 import {FormFieldType} from "@/components/forms/PatientForm";
 
 
-const PatientForm = ({isRegister}: {isRegister: boolean}) => {
+const UserRegisterForm = ({isRegister}: {isRegister: boolean}) => {
     const router = useRouter();
     const [isLoading, setIsLoading] =useState(false);
     const form = useForm<z.infer<typeof UserRegisterFormValidation>>({
@@ -85,4 +84,4 @@ const PatientForm = ({isRegister}: {isRegister: boolean}) => {
     )
 }
 
-export default PatientForm;
+export default UserRegisterForm;

@@ -1,15 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
-import PasskeyModal from "@/components/ui/PasskeyModal";
-import UserRegisterForm from "@/components/forms/UserRegisterForm";
+import EmailConfirmationForm from "@/components/forms/EmailConfirmationForm";
 
 
-
-export default function UserRegister({searchParams}: SearchParamProps) {
-    const isAdmin = searchParams.admin === "true";
+export default function EmailConfirmation({searchParams}: SearchParamProps) {
     return (
         <div className="flex h-screen max-h-screen">
-            {isAdmin && <PasskeyModal/>}
             <section className="remove-scrollbar container my-auto">
                 <div className="sub-container max-w-[496px]">
                     <Image
@@ -19,11 +14,7 @@ export default function UserRegister({searchParams}: SearchParamProps) {
                         alt="Patient"
                         className="mb-12 h-10 w-fit"
                     />
-                    <UserRegisterForm isRegister = {true} />
-                    <div className="text-14-regular mt-20 flex justify-between">
-                        <p className="justify-items-end text-dark-600 xl:text-left">© 2024 CarePulse</p>
-                        <Link href="/public?admin=true" className="text-green-500">Admin</Link>
-                    </div>
+                    <EmailConfirmationForm isRegister={false}/>
                 </div>
             </section>
             <Image
